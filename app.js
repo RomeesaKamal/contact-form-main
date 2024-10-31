@@ -110,7 +110,7 @@ queryType.forEach((radio) => {
 // Add form submit event listner
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
-	// errorMessage();
+  
 	const hasError = errorMessage();
 	// Show success message if no errors
 	if (!hasError) {

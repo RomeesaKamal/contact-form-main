@@ -63,7 +63,7 @@ textarea {
   border-radius: 8px;
   border: 1px solid hsl(186, 15%, 59%);
   font-size: 1rem;
-  border-color:  hsl(169, 82%, 27%);
+  border-color: hsl(169, 82%, 27%);
   cursor: pointer;
 }
 
@@ -82,15 +82,14 @@ textarea {
   grid-column: span 2;
   height: 100px;
   resize: horizontal;
-  border-color:  hsl(169, 82%, 27%);
-
+  border-color: hsl(169, 82%, 27%);
 }
 
 fieldset {
   border: none;
   padding: 0;
   color: hsl(187, 24%, 22%);
-  border-color:  hsl(169, 82%, 27%);
+  border-color: hsl(169, 82%, 27%);
 }
 
 legend {
@@ -118,7 +117,7 @@ fieldset label {
   gap: 10px;
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid  hsl(169, 82%, 27%);
+  border: 1px solid hsl(169, 82%, 27%);
   cursor: pointer;
 }
 
@@ -160,7 +159,7 @@ button:hover {
   background-color: hsl(187, 24%, 22%);
 }
 
-.msg-container{
+.msg-container {
   display: flex;
   justify-self: start;
   flex-direction: column;
@@ -171,8 +170,9 @@ button:hover {
   gap: 5px;
   box-shadow: 0px 4px 8px rgba(20, 55, 63, 0.4);
 }
+
 .para-container1,
-.para-container2{
+.para-container2 {
   background-color: hsl(187, 24%, 22%);
   display: flex;
   justify-content: start;
@@ -180,11 +180,14 @@ button:hover {
   padding: 2px;
   
 }
-#para, #para1{
+
+#para,
+#para1 {
   display: inline;
   color: hsl(0, 0%, 100%);
 }
-.para-container1{
+
+.para-container1 {
   gap: 10px;
 }
 
@@ -193,14 +196,14 @@ button:hover {
 }
 
 @media (max-width: 375px) {
-  .container{
+  .container {
     padding: 20px;
   }
   form {
     display: flex;
     flex-direction: column;
   }
-  .msg-container{
+  .msg-container {
     justify-self: start;
     align-items: self-start;
     padding: 5px;
