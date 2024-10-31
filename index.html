@@ -1,107 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Frontend Mentor | Contact form</title>
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-        padding: 30px;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="msg-container hide">
-        <div class="para-container1"><img src="./assets/images/icon-success-check.svg"><p id="para">Message Sent! </p></div>
-        <div class="para-container2"><p id="para1">Thanks for completing the form. We'll be in touch soon!</p?>  </div>
-     </div>
-      <div class="form-box">
-        <header>
-          <h1>Contact Us</h1>
-        </header>
-        <form action="" class="contactUs">
-          <div lass="input-container">
-            <label for="firstName">
-              First Name <span>*</span>
-              <input type="text" id="firstName" name="firstName" required />
-            </label>
-            <p class="error"></p>
-          </div>
-          <div class="input-container">
-            <label for="lastName">
-              Last Name <span>*</span>
-              <input type="text" id="lastName" name="lastName" required />
-            </label>
-            <p class = "error"></p>
-          </div>
-          <div class="email">
-            <label for="email">
-              Email Address <span>*</span>
-              <input type="email" id="email" name="email" required />
-            </label>
-            <p class = "para hide">Please enter a valid email address</p>
-          </div>
-          <legend>Query Type <span>*</span></legend>
-          <fieldset class="selector" >
-            <label for="generalEnquiry">
-              <input
-                type="radio"
-                id="generalEnquiry"
-                name="queryType"
-                required
-              />
-              General Enquiry
-            </label>
-          </fieldset>
-          <fieldset class="selector">
-            <label for="supportRequest">
-              <input type="radio" id="supportRequest" name="queryType" />
-              Support Request
-            </label>
-          </fieldset>
-          <p class = "para hide">Please select a query type</p>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
-          <div class="Message-container">
-            <label for="message">
-              Message <span>*</span>
-              <textarea id="message" name="message" required></textarea>
-            </label>
-            <p class = "para hide">This field is required</p>
+  <title>Frontend Mentor | Contact form</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      padding: 30px;
+    }
 
-          </div>
-          <label for="consent" class="consent">
-            <input type="checkbox" id="consent" name="consent" required /> I here by
-            consent to being contacted by the team <span>*</span>
-          </label>
-    <p class = "para hide">To submit this form, please consent to being contacted</p>
-          <button type="submit" class="btn">Submit</button>
-          <small id="error"></small>
-        </form>
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div id="msg">
+      <div class="successMessage"><img src="./assets/images/icon-success-check.svg">
+        <p id="para">Message Sent! </p>
+      </div>
+      <div class="successMessage">
+        <p id="para1">Thanks for completing the form. We'll be in touch soon!</p?>
       </div>
     </div>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Romeesa kamal</a>.
-    <script src="script.js"></script>
+    <div class="form-box">
+      <header>
+        <h1>Contact Us</h1>
+      </header>
+      <form action="" class="contactUs">
+        <div lass="input-container">
+          <label for="firstName">
+            First Name <span>*</span>
+            <input type="text" id="firstName" name="firstName" />
+          </label>
+          <p class="firstNameError"></p>
+        </div>
+        <div class="input-container">
+          <label for="lastName">
+            Last Name <span>*</span>
+            <input type="text" id="lastName" name="lastName" />
+          </label>
+          <p class="lastNameError"></p>
+        </div>
+        <div class="email">
+          <label for="email">
+            Email Address <span>*</span>
+            <input type="email" id="email" name="email" />
+          </label>
+          <p class="emailError"></p>
+        </div>
+        <legend>Query Type <span>*</span></legend>
+        <fieldset class="selector">
+          <label for="generalEnquiry">
+            <input type="radio" id="generalEnquiry" name="queryType" />
+            General Enquiry
+          </label>
+        </fieldset>
+        <fieldset class="selector">
+          <label for="supportRequest">
+            <input type="radio" id="supportRequest" name="queryType" />
+            Support Request
+          </label>
+        </fieldset>
+        <p class="queryTypeError"></p>
 
+        <div class="Message-container">
+          <label for="message">
+            Message <span>*</span>
+            <textarea id="message" name="message"></textarea>
+          </label>
+          <p class="textAreaError"></p>
+
+        </div>
+        <label for="consent" class="consent">
+          <input type="checkbox" id="consent" name="consent"/> I here by
+          consent to being contacted by the team <span>*</span>
+        </label>
+        <p class="consentError email"></p>
+        <button type="submit" class="btn">Submit</button>
+        <small id="error"></small>
+      </form>
     </div>
-  </body>
+  </div>
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Romeesa kamal</a>.
+     <script src="app.js"></script>
+
+  </div>
+</body>
+
 </html>
