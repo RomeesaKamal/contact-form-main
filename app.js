@@ -108,15 +108,26 @@ queryType.forEach((radio) => {
 });
 
 // Add form submit event listner
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  // errorMessage();
-  const hasError = errorMessage();
-
-  // Show success message if no errors
-  if (!hasError) {
-    messageSuccess.classList.add("msg-container");
-  } else {
-    messageSuccess.classList.remove("msg-container");
-  }
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
+	// errorMessage();
+	const hasError = errorMessage();
+	// Show success message if no errors
+	if (!hasError) {
+		console.log('Form submitted successfully');
+		messageSuccess.classList.remove('hide');
+	} else {
+		messageSuccess.classList.add('hide');
+	}
 });
+
+
+
+
+
+
+
+
+
+
+
