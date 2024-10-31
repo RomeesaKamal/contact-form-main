@@ -54,7 +54,6 @@ form {
 form label {
   font-size: 16px;
   color: hsl(187, 24%, 22%);
-  /* display: block; */
 }
 
 input[type="text"],
@@ -66,7 +65,14 @@ textarea {
   border-radius: 8px;
   border: 1px solid hsl(186, 15%, 59%);
   font-size: 1rem;
+  border-color:  hsl(169, 82%, 27%);
   cursor: pointer;
+}
+
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+textarea:focus-visible {
+  outline-color: hsl(169, 82%, 27%);
 }
 
 .email {
@@ -78,12 +84,15 @@ textarea {
   grid-column: span 2;
   height: 100px;
   resize: horizontal;
+  border-color:  hsl(169, 82%, 27%);
+
 }
 
 fieldset {
   border: none;
   padding: 0;
   color: hsl(187, 24%, 22%);
+  border-color:  hsl(169, 82%, 27%);
 }
 
 legend {
@@ -111,7 +120,7 @@ fieldset label {
   gap: 10px;
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid hsl(186, 15%, 59%);
+  border: 1px solid  hsl(169, 82%, 27%);
   cursor: pointer;
 }
 
@@ -134,11 +143,6 @@ label.consent {
   gap: 10px;
   font-size: 14px;
   color: hsl(187, 24%, 22%);
-}
-
-form input:focus-visible,
-form textarea:focus-visible {
-  outline-color: hsl(0, 66%, 54%);
 }
 
 button {

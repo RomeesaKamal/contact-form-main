@@ -18,7 +18,7 @@ const successMessage = document.querySelector(".successMessage");
 
 function errorMessage() {
   let hasError = false; // Initialize flag for tracking errors
-  // Validate First Name(
+  // Validate First Name
   if (firstName.value.trim() === "") {
     firstNameError.textContent = "This field is required";
     firstNameError.style.color = "red";
