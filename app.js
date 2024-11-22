@@ -36,6 +36,7 @@ function errorMessage() {
     hasError = true;
   } else if (lastName.value.length < 3) {
     lastNameError.textContent = "Last Name should at least 3 characters long";
+    lastNameError.style.color = "red";
     hasError = true;
   } else {
     lastNameError.textContent = "";
@@ -96,6 +97,7 @@ function errorMessage() {
   return hasError;
 }
 // Change background color of selected radio button
+
 queryType.forEach((radio) => {
   radio.addEventListener("input", () => {
     queryType.forEach((btn) => {
@@ -110,14 +112,15 @@ queryType.forEach((radio) => {
 // Add form submit event listner
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
-  
 	const hasError = errorMessage();
+  
+
 	// Show success message if no errors
 	if (!hasError) {
 		console.log('Form submitted successfully');
-		messageSuccess.classList.remove('hide');
+		successMessage.classList.add('.msg-container');
 	} else {
-		messageSuccess.classList.add('hide');
+		successMessage.classList.add('.msg-container');
 	}
 });
 

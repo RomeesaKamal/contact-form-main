@@ -159,7 +159,7 @@ button:hover {
   background-color: hsl(187, 24%, 22%);
 }
 
-.msg-container {
+.msg-container{
   display: flex;
   justify-self: start;
   flex-direction: column;
@@ -193,6 +193,7 @@ button:hover {
 
 .hide {
   display: none;
+
 }
 
 @media (max-width: 375px) {
