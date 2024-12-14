@@ -14,7 +14,7 @@ const emailError = document.querySelector(".emailError");
 const textAreaError = document.querySelector(".textAreaError");
 const queryTypeError = document.querySelector(".queryTypeError");
 const consentError = document.querySelector(".consentError");
-const successMessage = document.querySelector(".successMessage");
+const successMessage = document.querySelector("#msg");
 
 function errorMessage() {
   let hasError = false; // Initialize flag for tracking errors
@@ -110,19 +110,26 @@ queryType.forEach((radio) => {
 });
 
 // Add form submit event listner
+
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const hasError = errorMessage();
-  
 
 	// Show success message if no errors
 	if (!hasError) {
 		console.log('Form submitted successfully');
-		successMessage.classList.add('.msg-container');
+		successMessage.style.display = 'block';
+
+		// Hide success message after 2 seconds and reset the form
+		setTimeout(() => {
+			successMessage.style.display = 'none';
+			form.reset();  // This resets the form fields
+		}, 2000); // 2000 milliseconds = 2 seconds
 	} else {
-		successMessage.classList.add('.msg-container');
+		successMessage.style.display = 'none';
 	}
 });
+
 
 
 

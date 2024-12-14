@@ -160,7 +160,7 @@ button:hover {
 }
 
 .msg-container{
-  display: flex;
+  display: none;
   justify-self: start;
   flex-direction: column;
   background-color: hsl(187, 24%, 22%);
@@ -170,6 +170,8 @@ button:hover {
   gap: 5px;
   box-shadow: 0px 4px 8px rgba(20, 55, 63, 0.4);
 }
+
+
 
 .para-container1,
 .para-container2 {
